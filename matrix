@@ -1,0 +1,29 @@
+void setup(){
+  size(600,800);
+}
+  
+
+void draw(){
+  background(255);
+  
+  translate(width/2, height/2); // moving the origin of the coordinates to the midddle of the void.
+  rotate(QUARTER_PI); // rotating the coordinates around the origin to the right by a quarter of a pie worth of radiants.
+  
+  //red circle in the middle.
+  stroke(255,0,0);
+  circle(0,0,width/2);
+  
+  
+  //geen vertical lines
+  stroke(0,255,0); //make the vertical lines green
+  for(int x = 0; x < width; x += 30){
+    line(x, 0, x, height); // line(x,y,x2,y2)
+  }
+  
+  //blue horizontal lines
+  stroke (0, 0, 225);//make the horizontal lines blue
+  for(int y = 0; y < height; y += 30) {
+    line(0, y, width, y); 
+    
+  }
+}
